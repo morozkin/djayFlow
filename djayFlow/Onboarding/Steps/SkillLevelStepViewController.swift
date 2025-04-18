@@ -128,12 +128,12 @@ final class SkillLevelStepViewController: UIViewController {
         observe { [weak self] in
             guard let self else { return }
             
-            for (skillLevelView, skillLevel) in zip(skillLevelViews, viewModel.skillLevels) {
-                skillLevelView.update(level: skillLevel.description, selected: skillLevel == viewModel.selectedSkillLevel)
+            for (skillLevelView, skillLevel) in zip(self.skillLevelViews, self.viewModel.skillLevels) {
+                skillLevelView.update(level: skillLevel.description, selected: skillLevel == self.viewModel.selectedSkillLevel)
             }
             
-            if viewModel.selectedSkillLevel != nil {
-                feedbackGenerator.selectionChanged()
+            if self.viewModel.selectedSkillLevel != nil {
+                self.feedbackGenerator.selectionChanged()
             }
         }
     }

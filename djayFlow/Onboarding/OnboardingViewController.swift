@@ -95,7 +95,7 @@ final class OnboardingViewController: UIViewController {
         observe { [weak self] in
             guard let self, self.viewModel.currentStep != lastStep else { return }
             
-            let currentStep = viewModel.currentStep
+            let currentStep = self.viewModel.currentStep
             
             if lastStep.id != currentStep.id {
                 self.transition(from: lastStep, to: currentStep)
