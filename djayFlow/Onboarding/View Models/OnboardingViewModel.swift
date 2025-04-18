@@ -38,7 +38,12 @@ final class OnboardingViewModel {
         
         switch currentStep.id {
         case .intro:
-            currentStep = Step(id: .awards, stepNumber: 1, isActionEnabled: true, actionTitle: "Continue")
+            currentStep = Step(
+                id: .awards,
+                stepNumber: 1,
+                isActionEnabled: true,
+                actionTitle: "Continue"
+            )
         case .awards:
             currentStep = Step(
                 id: .skillLevelSelection,
